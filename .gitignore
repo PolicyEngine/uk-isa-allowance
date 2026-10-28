@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# HMRC's tables are downloaded and checked against a pinned SHA-256 by
+# scripts/hmrc_isa_tables.py, so they are not committed.
+data/
