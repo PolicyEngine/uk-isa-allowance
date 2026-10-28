@@ -7,7 +7,7 @@ PolicyEngine analysis of how people use the £20,000 Individual Savings Account 
 1. How many people pay the full allowance into cash ISAs, stocks and shares ISAs, or both?
 2. What salary would a single person need to pay in the full allowance?
 3. What share of the adult population pays in the full allowance?
-4. How many people would a £12,000 annual cash ISA limit bind from April 2027?
+4. How many people would a £12,000 annual cash ISA limit bind? (A limit was set for April 2027; the Budget on 28 October 2026 announced that it will not go ahead.)
 
 ## Data
 
@@ -35,6 +35,8 @@ uv run python scripts/salary_floor.py --year 2026 --spending 15000
 
 `hmrc_isa_tables.py` downloads HMRC's tables to `data/` and checks them against a pinned SHA-256 before reading any cell. `salary_floor.py` finds the smallest salary that leaves the allowance (plus any yearly spending) after income tax and employee National Insurance, outside Scotland and in Scotland.
 
-## Status
+## Results
 
-Draft. The figures are under review and not yet published here.
+Figures for 2023-24, with sources and caveats, are in [results.md](results.md).
+
+Engine work needed to model ISA limits directly: [PolicyEngine/policyengine-uk#2710](https://github.com/PolicyEngine/policyengine-uk/issues/2710).
